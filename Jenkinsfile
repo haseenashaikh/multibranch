@@ -4,15 +4,16 @@ pipeline{
         stage('git clone'){
             steps{
                 sh'''
+                pwd
                 rm -rf *
-                git clone https://github.com/haseenashaikh/multibranch.git
+                git clone https://github.com/haseenashaikh/moon.git
                 '''
             }
         }
         stage('maven1'){
             steps{
                 sh'''
-                cd multibranch
+                cd moon
                 mvn clean
                 '''
             }
@@ -20,7 +21,7 @@ pipeline{
         stage('maven2'){
             steps{
                 sh'''
-                cd multibranch
+                cd moon
                 mvn test
                 '''
             }
@@ -28,7 +29,7 @@ pipeline{
         stage('maven3'){
             steps{
                 sh'''
-                cd multibranch
+                cd moon
                 mvn clean
                 '''
             }
@@ -36,7 +37,7 @@ pipeline{
         stage('maven4'){
             steps{
                 sh'''
-                cd multibranch
+                cd moon
                 mvn install package
                 '''
             }
