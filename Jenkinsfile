@@ -14,7 +14,7 @@ pipeline{
             steps{
                 sh'''
                 cd multibranch
-                mvn compile
+                mvn clean
                 '''
             }
         }
