@@ -5,7 +5,7 @@ pipeline{
             steps{
                 sh'''
                 rm -rf *
-                git clone https://github.com/haseenashaikh/multibranch.git
+                git clone "https://github.com/haseenashaikh/multibranch.git"
                 '''
             }
         }
