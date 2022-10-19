@@ -4,7 +4,6 @@ pipeline{
         stage('git clone'){
             steps{
                 sh'''
-                pwd
                 rm -rf *
                 git clone https://github.com/haseenashaikh/multibranch.git
                 '''
